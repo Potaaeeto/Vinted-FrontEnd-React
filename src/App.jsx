@@ -1,5 +1,4 @@
 import "./App.css";
-import Cookies from "js-cookie";
 
 // Je renomme BrowserRouter en Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

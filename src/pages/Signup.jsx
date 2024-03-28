@@ -1,42 +1,46 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import { useState } from "react";
 
 const Signup = () => {
-  const [data, setData] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post(
-          "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-          {
-            email: "johndoe@lereacteur.io",
-            username: "JohnDoe",
-            password: "azerty",
-          }
-        );
-        console.log(response.data);
-        setData(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const signup = async () => {
+    try {
+      const response = await axios.post(
+        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        {
+          email: "johndoe@lereacteur.io",
+          username: "JohnDoe",
+          password: "azerty",
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  return isLoading ? (
-    <p>En cours de chargement...</p>
-  ) : (
+  const handleSubmit = (event) => {
+    console.log("Jai cliqué");
+    event.preventDefault;
+  };
+
+  return (
     <div>
       <h1>S'inscrire</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
           id="username"
           placeholder="Nom d'utilisateur"
+          value={username}
+          onChange={(event) => {
+            return setUsername(event.target.value);
+          }}
         />
         <br />
         <input type="email" name="email" id="email" placeholder="Email" />
