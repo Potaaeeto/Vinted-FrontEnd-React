@@ -1,4 +1,5 @@
 import "./App.css";
+import Cookies from "js-cookie";
 
 // Je renomme BrowserRouter en Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -6,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import des Pages
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
+import Signup from "./pages/Signup";
 
 //import des composants
 import Header from "./components/Header";
@@ -25,6 +27,7 @@ function App() {
         {/* path=chemin element=le composant à afficher si l'url correspond au chemin */}
         <Route path="/" element={<Home bannerVinted={bannerVinted} />} />
         <Route path="/offers/:id" element={<Offer />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
     </Router>
