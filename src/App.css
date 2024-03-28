@@ -7,9 +7,17 @@ body {
   margin: 0 auto;
 }
 
+span {
+  color: #999999;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* HEADER */
 header {
-  height: 90px;
+  height: 70px;
   background-color: white;
 }
 
@@ -43,4 +51,39 @@ header img {
 
 .header-buttons button:hover {
   cursor: pointer;
+}
+
+/* MAIN */
+
+.bannerVinted {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.articleHome {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.articleHome-container1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.articleHome-container1 img {
+  height: 25px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.articleHome article > img {
+  /* border: 2px solid red; */
+  height: 360px;
+  width: 235px;
+  object-fit: cover;
 }
