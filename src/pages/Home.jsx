@@ -33,7 +33,7 @@ const Home = ({ bannerVinted }) => {
     <p>En cours de chargement...</p>
   ) : (
     <main>
-      <h1>Je suis la page Home</h1>
+      {/* <h1>Je suis la page Home</h1> */}
       <img className="bannerVinted" src={bannerVinted} alt="banner-Vinted" />
       <div className="container articleHome">
         {data.offers.map((offer) => {

@@ -65,6 +65,7 @@ header img {
   display: flex;
   flex-wrap: wrap;
   margin: 30px auto;
+  gap: 20px;
 }
 
 .articleHome-container1 {
@@ -86,4 +87,10 @@ header img {
   height: 360px;
   width: 235px;
   object-fit: cover;
+}
+
+.offer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
